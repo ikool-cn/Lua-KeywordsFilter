@@ -5,8 +5,16 @@
 
 ![](https://github.com/ikool-cn/Lua-KeywordsFilter/blob/master/trie.jpg)  
 
+### Dict struct
+
 ```lua
---test case
+Dict = {}
+Dict.table = {"fuck", "brag", "bitch"}
+return Dict
+```
+### Test case
+
+```lua
 Filter.initTrieTree()
 str = "You cheap, lying, no good, rotten, floor flushing, low life, snake licking, dirt eating, inbred, over-stuffed, ignorant, blood-sucking, dog kissing, brainless, dickless, hopeless, heartless, fatass, bug-eyed, stiff-legged, spineless, worm-headed sack of monkey shit! fuck"
 for i = 1, 1000000 do
