@@ -4,7 +4,7 @@ Filter = {}
 local TrieTree
 local Leaves
 
---构造trie字典树
+-- create trie
 function Filter.initTrieTree()
     Filter.TrieTree = {}
     Filter.Leaves = {}
@@ -24,11 +24,12 @@ function Filter.initTrieTree()
     end
 end
 
---替换字典中的词为***
+--replace keywords with ***
 function Filter.replace(str)
     local matchs = {}
     local leaves = Filter.Leaves
-    for i = 1, #str do
+    local i = 1
+    while i <= #str do
         local x = i
         local y = x
         local t = Filter.TrieTree
@@ -44,8 +45,12 @@ function Filter.replace(str)
             local word = string.sub(str, x, y)
             if leaves[word] then
                 table.insert(matchs, { b = x, e = y, l = (y - x + 1) })
+                i = y
+                goto continue -- luajit or lua >= 5.2
             end
         end
+        i = i + 1
+        ::continue::
     end
     if #matchs > 0 then
         local ret = ''

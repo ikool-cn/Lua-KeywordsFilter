@@ -5,6 +5,8 @@
 
 ![](https://github.com/ikool-cn/Lua-KeywordsFilter/blob/master/trie.jpg)  
 
+### Require Lua >= 5.2 OR Luajit
+
 ### Dict struct
 
 ```lua
