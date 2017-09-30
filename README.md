@@ -1,7 +1,7 @@
 # Lua-KeywordsFilter
 ====================
 
-### Filter keywords using trie tree
+### Using trie tree, find and replace keywords with ***
 
 ![](https://github.com/ikool-cn/Lua-KeywordsFilter/blob/master/trie.jpg)  
 
